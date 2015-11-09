@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Donations PAge</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="css/style.css" rel="stylesheet">
+	<link href="color/default.css" rel="stylesheet">
+
+</head>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+</script>
+
+<body background="img/bg1.jpg" id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<!-- Preloader -->
+	
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index">
+                    <h1>Donations Made</h1>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/service">About</a></li>
+		<li><a href="login">Login</a></li>
+		<li><a href="charities">Charities</a></li>
+          <li><a href="plaid-login">Bank</a></li>
+		<li><a href="/about">Contact</a></li>
+
+        
+      </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    </body>
+</html>
+
+
+<script language="JavaScript">
+    var first = getUrlVars()["charity"];
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+    var second = first.split('_').join(' ');
+    var third = "This is our charity: " + second;
+    third = third.fontsize("6");
+    third = third.fontcolor("white");
+    document.write(third);
+</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+    google.load('visualization', '1.1', {packages: ['corechart', 'line', 'table']});
+</script>
+<script type="text/javascript" src="../../bootstrap/js/transaction.js"></script>
+<script>
+	google.setOnLoadCallback(drawCurveTypes);
+</script>
+<div id="totalDonated" style="float:right; font-size: 20px; color: white; margin-top: 10px;"></div>
+<div id="chart_div"></div>
+<br><br><br>
+<div id="table_div"></div>
+

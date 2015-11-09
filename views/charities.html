@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <link rel="shortcut icon" href="public/img/favicon.ico">
+    <title>Charities</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
+  </head>
+  <body background="img/bg1.jpg" id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    
+          
+		
+		
+      <div class="container">
+        
+              <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+     
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/"><font color="White">Home</font></a></li>
+        <li><a href="/#service"><font color="White">About</font></a></li>
+		<li><a href="login"><font color="White">Login</font></a></li>
+		<li><a href="charities"><font color="White">Charities</font></a></li>
+          <li><a href="plaid-login"><font color="White">Bank</font></a></li>
+		<li><a href="/#about"><font color="White">Contacts</font></a></li>
+
+        
+      </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+          
+          
+          
+          
+          
+          
+
+      <h2><font color="White">Charities</font></h2>
+      <ul class="list-group">
+        <button onclick="retUnitedWay()" value="Uw" type="button" class="list-group-item" ><font size="5">United Way</font><img src="../../images/United_Way.jpg" class="charityimage"></button> 
+        <button onclick="retSalArmy()"   value="SalArmy"  type="button" class="list-group-item"><font size="5">Salvation Army</font><img src="../../images/Salvation_Army.jpg" class="charityimage"></button>
+        <button onclick="retFeedingAmerica()"  value="FA"    type="button" class="list-group-item" ><font size="5">Feeding America</font><img src="../../images/Feeding_America.jpg" class="charityimage"></button>
+        <button onclick="retANRC()"     value="ANRC"     type="button" class="list-group-item" ><font size="5">American National Red Cross</font><img src="../../images/Red_Cross.jpg" class="charityimage"></button>
+        <button onclick="retACS()"   value="ACS"     type="button" class="list-group-item" ><font size="5">American Cancer Society</font><img src="../../images/American_Cancer_Society.jpg" class="charityimage"></button>
+        <button onclick="retBGCoA()"  value="BGC"   type="button" class="list-group-item" ><font size="5">Boys & Girls Clubs of America</font><img src="../../images/Boys_And_Girls_Club.jpg" class="charityimage"></button>
+        <button onclick="retHFH()"  value="HFH"    type="button" class="list-group-item" ><font size="5">Habitat for Humanity</font><img src="../../images/Habitat_For_Humanity.jpg" class="charityimage"></button>
+        <button onclick="retUnicef()"  value="UNI"   type="button" class="list-group-item" ><font size="5">UNICEF</font><img src="../../images/Unicef.jpg" class="charityimage"></button>
+        <button onclick="retMAWF()"   value="MAW"  type="button" class="list-group-item" ><font size="5">Make-A-Wish Foundation of America</font><img src="../../images/Make_A_Wish.jpg" class="charityimage"></button>
+        <button onclick="retASPCA()"  value="ASP"   type="button" class="list-group-item" ><font size="5">ASPCA</font><img src="../../images/ASPCA.png" class="charityimage"></button>
+      </ul>
+      
+        <script>
+                    Parse.initialize("4GZVowEV6lVMrY428JCs9mPWkGAGlDwD16ZoARZA", "sKWTGbb3gkY5rj2UNGn8Or4MEa0lF1AoQ1EWMTDW");
+                    // var user = new Parse.User();
+                    //     user.set("username", "testuser");
+                    //     user.set("password", "testuser");
+                    //     user.set("email", "divyg@vt.edu");
+
+                    //     // other fields can be set just like with Parse.Object
+                    //     user.set("phone", "415-392-0202");
+
+                    //     user.signUp(null, {
+                    //       success: function(user) {
+                    //         // Hooray! Let them use the app now.
+                    //       },
+                    //       error: function(user, error) {
+                    //         // Show the error message somewhere and let the user try again.
+                    //         alert("Error: " + error.code + " " + error.message);
+                    //       }
+                    // });
+
+                    Parse.User.logIn("testuser", "testuser", {
+                        success: function(user) {
+                            console.log(user);
+                        },
+                        error: function(user, error) {
+                          console.log("I messed up");
+                          // The login failed. Check error to see why.
+                        }
+                    });
+                    var currentUser = Parse.User.current();
+                    function retUnitedWay() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=United_Way"
+                    }
+                    function retSalArmy() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=Salvation_Army"
+                    }
+                    function retFeedingAmerica() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=Feeding_America"
+                    }
+                    function retANRC() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=American_National_Red_Cross"
+                    }
+                    function retACS() {
+                       document.location.href = "http://www.giveayeet.org/donations?charity=American_Cancer_Society"
+                    }
+                    function retBGCoA() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=Boys and Girls Clubs of America"
+                    }
+                    function retHFH() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=Habitat_For_Humanity"
+                    }
+                    function retUnicef() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=UNICEF"
+                    }
+                    function retMAWF() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=Make_A_Wish"
+                    }
+                    function retASPCA() {
+                        document.location.href = "http://www.giveayeet.org/donations?charity=ASCPA"
+                    }
+
+                    function getLocation() {
+                       if (navigator.geolocation) {
+                          navigator.geolocation.getCurrentPosition(showPosition);
+                       } else {
+                          x.innerHTML = "Geolocation is not supported by this browser.";
+                       }
+                    }
+                    function showPosition(position) {
+                       console.log("Latitude: " + position.coords.latitude +
+                               "Longitude: " + position.coords.longitude);
+                    }
+          getLocation();
+        </script>
+      </h2>
+    </div>
+  </body>
+</html>
